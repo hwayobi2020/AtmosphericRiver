@@ -12,9 +12,9 @@ ECLOCK = threading.Lock()                # eccodes 비-thread-safe → 디코드
 
 B = "https://noaa-gefs-retrospective.s3.amazonaws.com/"
 REGION = os.environ.get("GEFS_REGION", "ca")
-_PTS = {"ca": (37.77, 237.58), "uk": (50.0, 355.0), "chile": (-33.0, 288.5)}
-_IVT = {"ca": "ivt_sf_1980_2023.npy", "uk": "ivt_uk_1980_2023.npy", "chile": "ivt_chile_1980_2023.npy"}
-_TIM = {"ca": "times_sf_1980_2023.npy", "uk": "times_uk_1980_2023.npy", "chile": "times_chile_1980_2023.npy"}
+_PTS = {"ca": (37.77, 237.58), "chile": (-33.0, 288.5)}
+_IVT = {"ca": "ivt_sf_1980_2023.npy", "chile": "ivt_chile_1980_2023.npy"}
+_TIM = {"ca": "times_sf_1980_2023.npy", "chile": "times_chile_1980_2023.npy"}
 LAT, LON = _PTS[REGION]
 MEMBERS = os.environ.get("GEFS_MEMBERS", "c00,p01,p02,p03,p04").split(",")
 LEADS = [int(x) for x in os.environ.get("GEFS_LEADS", "0,12,24,36,48,60,72").split(",")]

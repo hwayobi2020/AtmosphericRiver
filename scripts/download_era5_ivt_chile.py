@@ -1,6 +1,6 @@
 """
 Download ERA5 IVT for central Chile coast (Valparaiso, 33.0S, 71.5W) via the
-FULL single-levels dataset. Same method as download_era5_ivt_uk.py, coords only.
+FULL single-levels dataset.
 IVT magnitude = sqrt(viwve^2 + viwvn^2). 2-year chunks, 6-hourly, 1980-2023.
 
 Output:

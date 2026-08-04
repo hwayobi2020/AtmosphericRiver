@@ -44,7 +44,7 @@ def build(region):
 
 def main():
     arg = sys.argv[1] if len(sys.argv) > 1 else "all"
-    for r in (["ca", "uk", "chile"] if arg == "all" else [arg]):
+    for r in (["ca", "chile"] if arg == "all" else [arg]):
         build(r)
 
 

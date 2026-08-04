@@ -1,6 +1,6 @@
 """
 Build central-Chile circulation indices (jet, blocking) for the AR-duration model.
-Southern-hemisphere mirror of build_circ_uk.py: NCEP/NCAR daily Z500 & U250 over
+Southern-hemisphere counterpart: NCEP/NCAR daily Z500 & U250 over
 the Southeast Pacific (upstream/west of Valparaiso) via OPeNDAP, then
 circ_indices_chile.npz the SAME way as California/UK:
   blocking = day-of-year anomaly of AREA-MEAN Z500

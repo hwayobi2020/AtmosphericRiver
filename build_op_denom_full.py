@@ -9,7 +9,7 @@
 """
 import numpy as np, os, pywt, warnings; warnings.filterwarnings("ignore")
 from sklearn.metrics import f1_score
-IVTF = {"ca": "ivt_sf_1980_2023.npy", "uk": "ivt_uk_1980_2023.npy", "chile": "ivt_chile_1980_2023.npy"}
+IVTF = {"ca": "ivt_sf_1980_2023.npy", "chile": "ivt_chile_1980_2023.npy"}
 LEADS = [48, 54, 60, 66, 72, 78, 84, 90]; Li = {L: i for i, L in enumerate(LEADS)}
 GAP = 8   # GAP=8 six-hour steps = 2일 (D-2 컷)
 GRIDF = ["zanom_landfall", "ridge_up", "trough_up", "waveamp_up", "u250_landfall", "u250_up_mean", "merid_grad_lf", "ghgn", "ghgs", "jetlat_local"]
@@ -44,7 +44,7 @@ def folds(N, od, Nf=5, emb=64):
     return out
 
 
-for R in ["ca", "uk", "chile"]:
+for R in ["ca", "chile"]:
     fa = f"gefs_ivt_{R}_d2c00fa.npz"; tt = f"gefs_ivt_{R}_d2c00.npz"
     if not (os.path.exists(fa) and os.path.exists(tt) and "ivt" in np.load(fa).files and "ivt" in np.load(tt).files):
         print(f"[{R}] 예보 파일 미완 -> skip"); continue

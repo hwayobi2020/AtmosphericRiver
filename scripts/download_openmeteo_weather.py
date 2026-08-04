@@ -14,7 +14,7 @@ import time
 import numpy as np
 import requests
 
-PTS = {"ca": (37.77, -122.42), "uk": (50.0, -5.0), "chile": (-33.0, -71.5)}
+PTS = {"ca": (37.77, -122.42), "chile": (-33.0, -71.5)}
 VARS = ["temperature_2m", "pressure_msl", "precipitation",
         "relative_humidity_2m", "wind_speed_10m", "wind_direction_10m", "cloud_cover"]
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "raw")
